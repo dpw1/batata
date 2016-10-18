@@ -1,0 +1,43 @@
+/* VARIABLES - Variables used in this module.
+========================================================================== */
+
+$footer-height = 70px
+
+/* STYLE - General styling for this module.
+========================================================================== */
++max-breakpoint(sm)
+	.footer
+		line-height 30px
+		padding 20px 0
+.footer
+	line-height $footer-height
+	background transparent
+	border-top 1px solid $text-color-dark-3
+	text-transform capitalize
+	margin 0 auto
+	text-align center;
+	width 100%
+	
+	.footer_links
+		textHover($text-color-dark-3)
+		&:first-child
+			textHover($text-color-dark-1)
+			font-weight $font-bold
+			
+		&:after
+			content '|'
+			display inline
+			margin 0 10px
+		
+		&:last-child
+			&:after
+				display none
+
+
+/* BREAKPOINTS - Customizations for each specific breakpoint.
+========================================================================== */
+
++max-breakpoint(md)
+	.footer
+		line-height 30px
+		padding 20px 0

@@ -1,0 +1,46 @@
+/* VARIABLES - Variables used in this module.
+========================================================================== */
+
+$star-color = $yellow
+$star-size = $font-size-md
+$text-margin-top = 6px
+
+/* STYLE - General styling for this module.
+========================================================================== */
+
+.starRating_imgWrapper
+  display inline-block
+  font-size $star-size
+  line-height 25px
+  position relative
+  text-align left
+  vertical-align top
+  margin-top 4px
+  color $yellow
+  
+  &:after
+    content "☆☆☆☆☆"
+  .starRating_img
+    display block
+    left 0
+    position absolute
+    top 0
+    white-space nowrap
+    overflow hidden
+    &:after
+      content "★★★★★"
+
+.starRating_value
+  margin-top 6px
+  display inline-block
+  color $text-color-dark-2
+  font-size $font-size-xxxs
+  span
+    margin 0 $text-margin-top
+    font-size $font-size-sm
+    color $star-color
+    
+.starRating_review
+  font-size $font-size-xxxs
+  margin-top $text-margin-top
+  display inline-block

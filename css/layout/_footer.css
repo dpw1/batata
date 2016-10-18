@@ -1,0 +1,2 @@
+max-breakpoint(sm)
+.footer{line-height:70px;background:transparent;border-top:1px solid $text-color-dark-3;text-transform:capitalize;margin:0 auto;text-align:center;width:100%;}.footer .footer_links:first-child{font-weight:$font-bold}.footer .footer_links:after{content:'|';display:inline;margin:0 10px}.footer .footer_links:last-child:after{display:none}

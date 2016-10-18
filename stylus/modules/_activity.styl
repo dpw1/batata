@@ -1,0 +1,190 @@
+/* VARIABLES - Variables used in this module.
+========================================================================== */
+
+$content-background = $white
+$border-radius = 2px
+$header-background = $background-light-1
+$header-height = 48px
+
+$margin-vertical = 21px
+
+$item-user-height = 110px
+$item-user-bg = $white
+
+
+/* STYLE - General styling for this module.
+========================================================================== */
+
+.activity
+    width 100%
+    
+.activity_wrapper
+    width 95%
+    margin 0 auto
+	overflow hidden
+
+.activity_header
+    background $header-background 
+    border-top-left-radius $border-radius
+    border-top-right-radius $border-radius
+    height $header-height
+    line-height $header-height
+    border-bottom 1px solid $background-light-2 
+    font-weight $font-bold
+    textHover($text-color-dark-1)
+    width 100%
+
+	
+    .activity_header_sort
+        &:before
+            font-family FontAwesome
+            content '\f175'
+            margin-right 5px
+        span
+            font-weight $font-normal
+            
+    .activity_header_style
+        float right
+        padding-right 10px
+
+.activity_header_icon 
+    margin-left 20px
+    
+.activity_header_gridType
+    font-size $font-size-sm
+    display inline-block
+    float right
+    a
+        &:last-child
+            margin-right 0
+    i
+        margin-right 5px
+        
+/* =========== */
+
+.activity_item
+    width 100%
+    background $item-user-bg
+    height $item-user-height
+	position relative
+    overflow hidden
+	.activity_item_user
+		float left
+		height $item-user-height
+		width 380px
+		display inline-block
+        background blue
+
+	.activity_item_pic
+		height $item-user-height
+		line-height $item-user-height
+		width 68px
+		float left
+		margin-right 5px
+
+	.activity_item_title
+		display: inline-block;
+		font-size: 14px;
+		position: relative;
+		width: 60%
+		margin-top $margin-vertical
+		margin-bottom 0
+
+
+	.activity_item_userName
+		font-size $font-size-xxxs
+		position relative
+		left 0
+		textHover($text-link-color)
+
+	.activity_item_follower
+		font-size $font-size-xxxs
+		&:before
+			content '|'
+			margin 0 5px
+
+	.activity_item_userLocation
+		font-size $font-size-xxxs
+
+		
+	
+/* ITEM REVIEW */
+
+.activity_item_review
+	width 300px
+	height $item-user-height - 12px
+	margin-top $margin-vertical	- 8px
+	display inline-block
+	float left
+	
+/* ITEM PRICE */
+
+.activity_item_price
+	display inline-block
+	height $item-user-height
+	width 89px
+	margin-top 15px
+
+/* PAGE NAV */
+.activity_pageNav
+	display block
+	padding-bottom 80px
+	
+/* BREAKPOINTS - Customizations for each specific breakpoint.
+========================================================================== */
+
++max-breakpoint(lg)
+	.activity_item_title
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow hidden
+		
+	.activity_item_review
+		width 257px
+		
+	.activity_item_user
+		width 295px
+		
++max-breakpoint(md)
+	.activity_item
+		height auto
+	.activity_item_user, .activity_item_title
+		width 80%
+	.activity_item_price
+		width 20%
+	.activity_item_review
+		width 85%
+		height auto
+		margin-left 70px
+		margin-top -30px
+		margin-bottom: 23px;
+
++max-breakpoint(sm)
+	.activity_item
+		height auto !important
+	
++max-breakpoint(xxs)
+	.activity_item_price
+		width 30%
+	.activity_item_user, .activity_item_title
+		width: 69%;
+	.activity_item_price
+		p
+			text-align right
+		div
+			right 0
+			left auto
+
++max-breakpoint(xxxs)
+	.activity_header_gridType
+		display none
+	.activity_item_pic
+		margin-bottom: -125px;
+	.activity_item_title, .activity_item_userName,.activity_item_userLocation
+		margin-left 71px
+	.activity_item_userLocation
+    	margin-top: -20px;
+	.activity_item_review
+		margin-top: -10px;
+	.activity_item_userName
+		display block

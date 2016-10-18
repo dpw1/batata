@@ -1,0 +1,41 @@
+/* VARIABLES - Variables used in this module.
+========================================================================== */
+/* STYLE - General styling for this module.
+========================================================================== */
+.cards {
+  padding: 40px 0;
+}
+.cards * {
+  position: relative;
+  text-align: center;
+}
+.cards_item {
+  height: 235px;
+  width: 25%;
+  display: inline-block;
+  float: left;
+  border: 1px solid #ff0;
+}
+/* MODIFIERS - Classes to modify this specific's module appearance.
+========================================================================== */
+.cards_item--big {
+  background: #008000;
+  height: 470px;
+}
+.cards_item--basic * {
+  text-transform: uppercase;
+}
+.cards_item_wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 90%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+/* BREAKPOINTS - Specific layout changes for responsiveness.
+========================================================================== */
+max-breakpoint(md)
+max-breakpoint(sm)
+max-breakpoint(xxxs)

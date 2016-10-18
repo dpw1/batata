@@ -1,0 +1,18 @@
+.signUp {
+  margin-bottom: 900px;
+}
+
+.signUp_form {
+  max-width: 570px;
+  margin: 0 auto;
+}
+
+.signUp_form_wrapper > input[type="text"] {
+  min-width: 495px;
+  height: 504px;
+  border-width: 1px;
+}
+
+.signUp_form_wrapper > input[type="submit"] {
+  width: 95px;
+}

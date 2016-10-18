@@ -1,0 +1,235 @@
+/* VARIABLES - Variables used in this module.
+========================================================================== */
+
+/* font color */
+$text-color = $text-color-light-1;
+$text-color-hover = $text-color-light-1;
+
+/* header_top */
+$colors = (#d14c31 #db7b33 #e4af56 #f2d3a5 #efecaf #fcf564 #ccdc55 #669752 #385826 #4675ad #6fb0e2 #9cd3ea #cbe9f2 #d8e6e9);
+$items = 14;
+$height = 5px;
+$input-background = $gray-shade-1;
+
+/* header_main */
+$background = $background-dark-1;
+$menu-height = 60px;
+
+/* header_bottom */
+$menu-bottom-height = 28px
+$menu-bottom-background = $white
+$menu-bottom-margin-right = 14px
+$header-bottom-font-color = $text-color-dark-1
+
+/* mobile */
+$margin-horizontal = 20px
+
+/* STYLE - General styling for this module.
+========================================================================== */
+
+.header
+    margin-bottom 15px
+
+/* header_top
+======================== */
+.header_top
+    width 100%
+    height $height
+    
+.header_top > div
+  display inline;
+  width: (100 / $items)%;
+  height: $height;
+  float: left;
+  
+  for each in (0..$items)
+  	  &:nth-child({each + 1})
+          background $colors[each]
+	  
+
+/* header_main
+======================== */  
+.header_main{
+	height $menu-height
+	line-height $menu-height
+	background $background;
+}
+
+.header_main_logo{
+	float left;
+	img{
+		margin-bottom 3px
+	}
+}
+
+.header_main_itemWrapper
+	height $menu-height
+	line-height $menu-height
+	display inline-block
+	margin-left 45px
+	
+	.header_main_item
+		display inline-block
+		margin-right 26px
+		&:last-child
+			margin-right 0
+		a
+            display block
+            textHover($text-color)	
+			font-weight $font-bold
+			  
+
+.header_main_search
+	position relative
+	margin-left 96px
+	display inline-block
+	width 200px
+
+	.header_main_search_icon
+		position absolute
+		left 10px
+		top 52%
+		transform translateY(-50%)
+		font-size $icon-size-md
+		color $text-color-dark-1
+	
+	.header_main_search_input
+		border-radius 20px
+		border none
+		height 32px
+		line-height 32px
+		padding-left 40px
+		max-width 165px
+		font-size $font-size-xxs
+		background $input-background
+		color $text-color-dark-1
+		&:focus
+			outline 0
+
+	.header_main_search_btn
+        height 26px
+        width 26px
+        backgroundHover(#64c2c7)
+        position relative
+        border-radius 50%
+        box-shadow: 1px 1px 3px #686868
+        top 9px
+        right 35px
+		
+		i
+			position absolute
+			color $white
+			top 7px
+			left 9px
+	
+.header_main_profile
+	display inline-block
+	width 100px
+	position relative
+
+	.header_main_profile_pic
+		img
+			border-radius 50%
+			border 2px solid $white
+
+.header_main_profile_icon
+    color #64c2c7
+    textHover(#64c2c7)
+    margin-left 10px
+		
+		
+.header_main_action
+	display inline-block
+	width 100px
+	height 32px
+	line-height 32px
+	border-radius 5px
+	background $black
+
+	
+	.header_main_action_item
+		textHover($text-color-light-1) 
+		position relative
+		display inline-block
+		width 30px
+		margin 0 auto
+		text-align center
+		min-width 30px
+		max-width 30px
+		/* Right border */
+		&:after
+			content ''
+			display block
+			position absolute
+			height 32px
+			width 1px
+			background $background
+			right -4px
+			top 0
+		&:last-child
+			border transparent
+			&:after
+				display none
+		i
+			margin-left 2px
+			line-height 32px
+
+.header_main_post
+    custom_button (standard sm)
+    width 140px
+    display inline-block
+    margin-left 15px
+
+	
+.header_main_mobileMenu
+	display none
+/* header_bottom
+======================== */  
+
+.header_bottom
+    background $menu-bottom-background
+    height $menu-bottom-height
+    line-height $menu-bottom-height
+    width 100%
+    display inline-block
+    &:last-child
+        margin-right 0
+
+.header_bottom_item
+    display inline-block
+    font-size $font-size-xxs
+    font-weight $font-bold
+    color $header-bottom-font-color
+    margin-right $menu-bottom-margin-right
+    line-height $menu-bottom-height
+	
+/* BREAKPOINTS - Customizations for each specific breakpoint.
+========================================================================== */
+
+/* BREAKPOINTS - Customizations for each specific breakpoint.
+========================================================================== */
+
++max-breakpoint(lg)	
+	.header_main_search
+		margin-left 72px
+	.header_main_action
+		display none
+
++max-breakpoint(md)
+	.header_main_logo
+		width 80%
+		margin 0 auto
+		text-align center
+	.header_main_mobileMenu
+		width 5%
+		display block
+		textHover($white)
+		float left
+		margin-left $margin-horizontal
+		i
+			font-size $font-size-md
+			margin-top 18px
+	.headerMobileCollapse
+		display none
+
+    

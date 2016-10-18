@@ -1,0 +1,20 @@
+/* VARIABLES - Variables used in this module.
+========================================================================== */
+
+$section-margin = 30px;
+
+/* STYLE - General styling for this module.
+========================================================================== */
+
+.breadcrumb
+    margin $section-margin 0;
+    width 100%
+    
+.breadcrumb_item
+    display inline-block
+a.breadcrumb_item
+    &:after
+        content '>'
+        display inline
+        margin-left 5px
+        margin-right 3px

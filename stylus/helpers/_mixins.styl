@@ -1,0 +1,79 @@
+font($font_size, $font_color, $font_weight)
+  font-size: $font_size
+  color: $font_color
+  font-weight: $font_weight
+
+
+font-face($font-family, $file-path, $font-weight, $font-style)
+  @font-face
+    font-family: $font-family
+    src: url("{$file-path}.eot")
+    src: url("{$file-path}.eot?#iefix") format("embedded-opentype"), url("{$file-path}.otf") format("truetype"), url("{$file-path}.svg#{$font-family}") format("svg")
+    font-weight: $font-weight
+    font-style: $font-style
+
+
+/* BREAKPOINTS 1 - Bootstrap's in-between breakpoints.
+========================================================================== */
+breakpoint($point)
+  if $point == lg
+    @media (min-width: 1200px)
+      {block}
+  else if $point == md
+    @media (min-width: 992px) and (max-width: 1199px)
+      {block}
+  else if $point == sm
+    @media (min-width: 768px) and (max-width: 991px)
+      {block}
+  else if $point == xs
+    @media (max-width: 767px) and (min-width: 641px)
+      {block}
+  else if $point == xxs
+    @media (max-width: 640px) and (min-width: 481px)
+      {block}
+  else if $point == xxxs
+    @media (max-width: 480px)
+      {block}
+  else if $point == xs-all
+    @media (max-width: 767px)
+      {block}
+
+
+/* BREAKPOINTS 2 - Max size bootstrap's breakpoints. Applies rules for 
+that value and below.
+========================================================================== */
+max-breakpoint($point)
+  if $point == lg
+    @media (max-width: 1200px)
+      {block}
+  else if $point == md
+    @media (max-width: 992px)
+      {block}
+  else if $point == sm
+    @media (max-width: 768px)
+      {block}
+  else if $point == xs
+    @media (max-width: 767px)
+      {block}
+  else if $point == xxs
+    @media (max-width: 640px)
+      {block}
+  else if $point == xxxs
+    @media (max-width: 480px)
+      {block}
+      
+
+/* Hover color mixins
+========================================================================== */
+      
+backgroundHover(new-color, qt = 10%)
+    background new-color
+    transition all $transition_speed
+    &:hover
+        background darken(new-color, qt)
+        
+textHover(new-color, qt = 10%)
+    color new-color
+    transition all $transition_speed
+    &:hover
+        color: darken(new-color, qt)

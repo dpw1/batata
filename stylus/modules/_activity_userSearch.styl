@@ -1,0 +1,73 @@
+/* VARIABLES - Variables used in this module.
+========================================================================== */
+
+$font-size-name = $font-size-sm
+$font-size-location = $font-size-xs
+$font-size-info = $font-size-xxs
+$font-size-tags = $font-size-xxs
+
+$pic-margin-top = 15px
+$pic-margin-right = 10px
+$text-margin-bottom = 2px
+
+/* STYLE - General styling for this module.
+========================================================================== */
+
+.activity_userSearch
+	margin 0 auto
+	border-radius 3px
+	margin-top 10px
+
+//	margin-right 10px
+
+.activity_userSearch_item
+	background white
+	height auto
+//	min-width 257px
+
+	.activity_userSearch_item_pic 
+		float left
+		margin-right $pic-margin-right
+		margin-bottom $pic-margin-top
+		margin-top $pic-margin-top
+	.activity_userSearch_item_name
+		font-size $font-size-name
+		margin-bottom $text-margin-bottom
+
+	.activity_userSearch_item_location
+		font-size $font-size-location
+		margin-bottom $text-margin-bottom
+
+	.activity_userSearch_item_info
+		*
+			font-size $font-size-name
+			display inline-block
+			font-weight $font-normal
+		span
+			font-size $font-size-info
+
+.activity_userSearch_item_bottom
+	float left
+	width 100%
+	position relative
+	.starRating
+		float left
+	.activity_userSearch_item_bottom_tags
+		line-height 30px
+		margin-top 3px
+		a
+			float right
+			font-size $font-size-info
+			
+/* BREAKPOINTS - Customizations for each specific breakpoint.
+========================================================================== */
+
++max-breakpoint(xs)
+	.activity_userSearch_item
+		height 150px
+		max-height 150px
+	.activity_userSearch_item_name
+		padding-top 20px
++max-breakpoint(xxxs)
+	.activity_userSearch_item_name
+		padding-top 17px

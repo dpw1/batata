@@ -1,0 +1,56 @@
+custom_button(btn-type = standard, btn-size = md)
+    display block
+    text-align center
+    font-weight $font-bold
+    max-width 240px
+    border-radius 3px
+    
+    if btn-type == standard
+        color $white
+        backgroundHover($orange, 5%) 
+        box-shadow 0px 1px 2px darken($orange, 50%)
+    else if btn-type == accept
+        color $white
+        backgroundHover(green, 5%) 
+    else if btn-type == reject
+        color $text-color-dark-3
+        backgroundHover($background-light-3, 5%) 
+        box-shadow 0px 1px 2px darken($background-light-3, 50%)
+    
+    /* ==================== */
+
+    if btn-size == sm
+        $height = 34px
+        height $height
+        line-height $height
+        font-size $font-size-xs
+        i
+            font-size $font-size-xs
+    
+    else if btn-size == md
+        $height = 42px
+        height $height
+        line-height $height
+        font-size $font-size-sm 
+        i
+            font-size $font-size-sm
+        
+    else if btn-size == lg
+        $height = 250px
+        height $height
+        line-height $height
+        font-size 35px
+        i
+            font-size $font-size-sm
+    /* ======= ICON ======== */
+    
+
+/*input_btn(b, size = 40px)
+	border none
+	border-radius 50%
+	width size
+	height size
+	position relative
+	background b
+    box-shadow: 1px 1px 3px #686868*/
+

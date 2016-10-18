@@ -1,0 +1,69 @@
+/* VARIABLES - Variables used in this module.
+========================================================================== */
+
+$color = $text-color-sp
+
+$font-md = $font-size-md
+$
+
+/* STYLE - General styling for this module.
+========================================================================== */
+.pricingBlock
+	position relative
+
+.pricingBlock_price
+	font-size $font-size-md
+	font-weight $font-bold
+	color $text-color-sp
+	margin-bottom 5px
+	text-align center
+	&::first-letter
+		font-size $font-size-sm
+		margin-right -2px
+	
+.pricingBlock_btn
+	display inline-block
+	width 65px
+	height 32px
+	line-height 32px
+	border-radius 5px
+	background $background-light-2
+	margin-left 13px
+	position absolute
+	left 0
+	right 0
+	margin 0 auto
+	
+	a
+		textHover($text-color-dark-1)
+		position relative
+		display inline-block
+		width 30px
+		margin 0 auto
+		text-align center
+		min-width 30px
+		max-width 30px
+		/* Right border */
+		&:after
+			content ''
+			display block
+			position absolute
+			height 32px
+			width 1px
+			background $white
+			right -4px
+			top 0
+		&:last-child
+			border transparent
+			&:after
+				display none
+		i
+			margin-left 2px
+			line-height 32px
+			
+/* BREAKPOINTS - Customizations for each specific breakpoint.
+========================================================================== */
+
++max-breakpoint(sm)
+	.pricingBlock_price
+		font-size $font-size-sm

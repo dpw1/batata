@@ -1,0 +1,21 @@
+/* VARIABLES - Variables used in this module.
+========================================================================== */
+/* STYLE - General styling for this module.
+========================================================================== */
+.separator {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+.separator_block {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: 7px solid #000;
+  border-left-style: none;
+  border-top-style: none;
+  transform: rotate(45deg);
+  margin-right: -2px;
+}

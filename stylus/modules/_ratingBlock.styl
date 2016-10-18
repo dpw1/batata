@@ -1,0 +1,34 @@
+/* VARIABLES - Variables used in this module.
+========================================================================== */
+
+
+/* STYLE - General styling for this module.
+========================================================================== */
+
+
+.ratingBlock_line
+	display inline-block
+	width 100%
+	
+.ratingBlock_p
+	display inline-block
+	color $text-color-dark-1
+	font-size $font-size-xxs
+	a
+		textHover($text-link-color)
+	
+	
+.ratingBlock_line_icon
+	margin-right 2px
+	display inline-block
+	
+/* HELPERS - Classes to do specific changes to this module
+========================================================================== */
+
+
+/* BREAKPOINTS - Customizations for each specific breakpoint.
+========================================================================== */
+
++max-breakpoint(sm)
+	.--ratingBlockHideMobile
+		display none
