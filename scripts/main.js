@@ -1,18 +1,12 @@
 var BATATA = {
      init: function(){
-        this.variables();
-        this.events();
         this.initModules();
-    },
-    variables: function() {
-        
-    },
-    events: function() {
-        
     },
     initModules: function() {
         $("#header").load("/modules/header.html");
         $("#search").load("/modules/search.html");
+        $("#cardsSmall").load("/modules/cardsSmall.html");
+        $("#cardsBig").load("/modules/cardsBig.html");
         $("#footer").load("/modules/footer.html");
     }
 }
