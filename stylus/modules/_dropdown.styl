@@ -1,8 +1,37 @@
 .dropdown
 	position absolute
 	height 60px
-	width 60px
+	width 20px
 	z-index 3
-	background white
-	display block
+	background transparent
+	display inline-block
+	cursor pointer
+	text-align center
+	&:hover
+		.dropdown
+			background white
+		.dropdown_content
+			visibility: visible;
+			opacity: 1;
 	
+.dropdown_content
+	box-shadow 1px 1px 5px $background-light-3
+	background white
+	border 1px solid $background-light-4
+	border-bottom none
+	border-radius 3px
+	width: 100px;
+	margin-left: -80px;
+	margin-top: -20px;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.3s linear;
+	font-size $font-size-xxs
+	textHover($text-color-dark-2, 50%)
+	
+.dropdown_content_item
+	text-align center
+	border-bottom 1px solid $background-light-4
+	line-height 40px
+	.dropdown_content_link
+		display block

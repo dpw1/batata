@@ -2,6 +2,7 @@
 ========================================================================== */
 
 $content-background = $white
+$content-top-padding = 10px;
 $border-radius = 2px
 $header-background = $background-light-1
 $header-height = 48px
@@ -24,6 +25,7 @@ $icon-color = $text-color-dark-1
     border-bottom-left-radius $border-radius
     border-bottom-right-radius $border-radius
     
+	
 .sidebar_header
     background $header-background 
     border-top-left-radius $border-radius
@@ -39,8 +41,24 @@ $icon-color = $text-color-dark-1
     background $content-background
     padding 5px 0
     border-bottom 1px solid $background-light-1
+	
+.sidebar_category > label
+	position relative
+	width 100%
 
-.sidebar_category_header
+	display inline-block
+	> i
+		padding-left 15px
+		font-size $font-size-xs
+		color $icon-color
+		&:last-child
+			position absolute
+			left 160px
+			top 2px
+			
+.sidebar_category_content_review
+	float left
+/*.sidebar_category_header
     padding-left $category-header-padding-left
     display block
     height $category-header-height
@@ -59,12 +77,13 @@ $icon-color = $text-color-dark-1
         color $icon-color
         position absolute
         top 10px
-        right 10px
+        right 10px*/
 
 .sidebar_category_content
     color $text-color-content
     padding-left $category-content-padding-left 
-    
+    padding-top $content-top-padding
+	
 .sidebar_caterory_checkbox_wrapper
     display block
     margin-left $category-content-padding-left 
@@ -76,8 +95,35 @@ $icon-color = $text-color-dark-1
     margin 0 auto
     margin-top 10px
     custom_button (reject sm)
+	
+/* --------------------------------- */
+.sidebar
+	input[type='checkbox']
+		display none
+	label
+		cursor pointer
+		
+.sidebar_category_content, .sidebar_category_checkbox
+	padding-top $content-top-padding
+	overflow: hidden;
+	height: 0;
 
+.sidebar_category_checkbox input
+	display inline-block !important
+	
+.sidebar_category input:checked ~ .sidebar_category_content
+	height: auto
+	
+.sidebar_category input:checked ~ .sidebar_category_checkbox
+	height: auto
 
+	
+	
+.sidebar_category_price
+	input
+		width 40px
+	*
+		display inline-block
 /* HELPERS - Classes for very specific rules.
 ========================================================================== */
 

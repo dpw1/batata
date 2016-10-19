@@ -1,0 +1,56 @@
+/* VARIABLES - Variables used in this module.
+========================================================================== */
+
+$header-height = 40px
+
+$text-color-header = $text-color-light-1
+$text-color-content = $text-color-dark-1
+$icon-color = $text-color-dark-1
+
+$header-font-size = $font-size-xs
+$font-size = $font-size-xxs
+
+/* STYLE - General styling for this module.
+========================================================================== */
+
+.filter
+	display block
+	border 1px solid $text-color-dark-3
+	border-radius 3px
+	right 80px
+	background white
+	position absolute
+	max-width 200px
+	width 200px
+	z-index 5
+	*
+		font-size $font-size
+		
+.filter_wrapper
+	width 170px
+	margin 0 auto
+	
+.filter_block_header
+	height $header-height
+	line-height $header-height
+	*
+		display inline-block
+		
+.filter_block_content
+	height $header-height
+	line-height $header-height
+	input
+		outline 0
+		border 0
+	.starRating
+		*
+			font-size $font-size-md
+	*
+		font-weight $font-normal
+		
+/* BREAKPOINTS - Customizations for each specific breakpoint.
+========================================================================== */
+
++max-breakpoint(xxxs)
+	.filter
+		right 15px

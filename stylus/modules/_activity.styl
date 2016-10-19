@@ -130,6 +130,14 @@ $item-user-bg = $white
 	display block
 	padding-bottom 80px
 	
+.activity_header_filter
+	&:hover
+		border 1px solid gray
+		padding-bottom 12px
+		background yellow
+		box-shadow 10px 1px 5px $background-dark-2
+		.filter
+			display block
 /* BREAKPOINTS - Customizations for each specific breakpoint.
 ========================================================================== */
 
@@ -177,7 +185,9 @@ $item-user-bg = $white
 
 +max-breakpoint(xxxs)
 	.activity_header_gridType
-		display none
+		a
+			&:not(:first-child)
+				display none
 	.activity_item_pic
 		margin-bottom: -125px;
 	.activity_item_title, .activity_item_userName,.activity_item_userLocation
@@ -188,3 +198,5 @@ $item-user-bg = $white
 		margin-top: -10px;
 	.activity_item_userName
 		display block
+
+		

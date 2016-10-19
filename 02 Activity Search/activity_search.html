@@ -78,10 +78,23 @@
 
 						<a href="#" class="header_main_profile_pic"><img src="../images/face-1.png" alt=""></a>
 
-						<nav class="dropdown">
-							<a href="#"><i class="header_main_profile_icon fa fa-chevron-down"></i></a>
-						</nav>
 
+						<nav class="dropdown header_main_profile_icon">
+							<a href="#"><i class=" fa fa-chevron-down"></i></a>
+							<ul class="dropdown_content">
+								<li class="dropdown_content_item">
+									<a href="#" class="dropdown_content_link">Lorem</a>
+								</li>
+
+								<li class="dropdown_content_item">
+									<a href="#" class="dropdown_content_link">Lorem</a>
+								</li>
+
+								<li class="dropdown_content_item">
+									<a href="#" class="dropdown_content_link">Lorem</a>
+								</li>
+							</ul>
+						</nav>
 					</div>
 
 					<div class="header_main_action">
@@ -138,12 +151,13 @@
 
 				<!-- Category -->
 				<article class="sidebar_category">
-					<header>
-						<a href="#" class="sidebar_category_header">
-							<i class="sidebar_icon_category fa fa-folder"></i> Category
-							<i class="sidebar_icon_arrow fa fa-chevron-right"></i>
-						</a>
-					</header>
+
+					<input class="sidebar_category_input" type="checkbox" id="check-1" />
+					<label for="check-1">
+						<i class="sidebar_icon_category fa fa-folder"></i> Category
+						<i class="sidebar_icon_arrow fa fa-chevron-right"></i>
+					</label>
+
 
 					<div class="sidebar_category_content">
 						<span>Marketing & Advertising</span>
@@ -152,11 +166,13 @@
 
 				<!-- Tags -->
 				<article class="sidebar_category">
-					<header>
-						<a href="#" class="sidebar_category_header">
-							<i class="sidebar_icon_category fa fa-tag"></i> Tags
-						</a>
-					</header>
+
+					<input class="sidebar_category_input" type="checkbox" id="check-2" />
+					<label for="check-2">
+						<i class="sidebar_icon_category fa fa-tag"></i> Tags
+						<i class="sidebar_icon_arrow fa fa-chevron-right"></i>
+					</label>
+
 
 					<form class="sidebar_category_checkbox">
 						<div class="sidebar_caterory_checkbox_wrapper">
@@ -171,50 +187,86 @@
 					</form>
 				</article>
 
+
 				<!-- Followers -->
-				<div class="sidebar_category">
-					<header>
-						<a href="#" class="sidebar_category_header --noIconPadding">
-                        Followers: <span class="--spanText">Show All</span>
-                        <i class="sidebar_icon_arrow fa fa-chevron-down"></i>
-                        </a>
-					</header>
-				</div>
-
-				<!-- Reviews -->
-				<div class="sidebar_category">
-					<header>
-						<a href="#" class="sidebar_category_header --noIconPadding">
-                        Reviews: <span class="--spanText">3.0 +</span>
-                        <i class="sidebar_icon_arrow fa fa-chevron-down"></i>
-                        </a>
-					</header>
-				</div>
-
-				<!-- Region -->
 				<article class="sidebar_category">
-					<header>
-						<a href="#" class="sidebar_category_header">
-							<i class="sidebar_icon_category fa fa-globe"></i> Region
-							<i class="sidebar_icon_arrow fa fa-chevron-right"></i>
-						</a>
-					</header>
+
+					<input class="sidebar_category_input" type="checkbox" id="check-3" />
+					<label for="check-3">
+						<i class="sidebar_icon_category fa fa-user"></i> Followers
+						<i class="sidebar_icon_arrow fa fa-chevron-right"></i>
+					</label>
+
 
 					<div class="sidebar_category_content">
-						<span>Rio de Janeiro, Brazil</span>
+						<span>Followers</span>
 					</div>
 				</article>
 
+				<!-- Reviews -->
+				<article class="sidebar_category">
+
+					<input class="sidebar_category_input" type="checkbox" id="check-4" />
+					<label for="check-4">
+						<i class="sidebar_icon_category fa fa-star"></i> Reviews
+						<i class="sidebar_icon_arrow fa fa-chevron-right"></i>
+					</label>
+
+
+					<div class="sidebar_category_content">
+						<!--START STAR RATING CLICK -->
+						<fieldset class="sidebar_category_content_review starRatingClick">
+							<input type="radio" id="score-5" name="score" value="5" />
+							<label title="5 stars" for="score-5">5 stars</label>
+
+							<input type="radio" id="score-4" name="score" value="4" />
+							<label title="4 stars" for="score-4">4 stars</label>
+
+							<input type="radio" id="score-3" name="score" value="3" />
+							<label title="3 stars" for="score-3">3 stars</label>
+
+							<input type="radio" id="score-2" name="score" value="2" />
+							<label title="2 stars" for="score-2">2 stars</label>
+
+							<input type="radio" id="score-1" name="score" value="1" />
+							<label title="1 stars" for="score-1">1 stars</label>
+						</fieldset>
+						<!-- END STAR RATING CLICK -->
+					</div>
+				</article>
+
+				<!-- Region -->
+				<article class="sidebar_category">
+
+					<input class="sidebar_category_input" type="checkbox" id="check-5" />
+					<label for="check-5">
+						<i class="sidebar_icon_category fa fa-globe"></i> Region
+						<i class="sidebar_icon_arrow fa fa-chevron-right"></i>
+					</label>
+
+					<div class="sidebar_category_content">
+						<span>Rio de Janeiro</span>
+					</div>
+
+				</article>
+
+
 				<!-- Price -->
 				<article class="sidebar_category">
-					<header>
-						<a href="#" class="sidebar_category_header">
-							<i class="sidebar_icon_category fa fa-money"></i> Price
-							<i class="sidebar_icon_arrow fa fa-chevron-right"></i>
-						</a>
-					</header>
 
-					<!-- TODO -->
+					<input class="sidebar_category_input" type="checkbox" id="check-6" />
+					<label for="check-6">
+						<i class="sidebar_icon_category fa fa-money"></i> Price
+						<i class="sidebar_icon_arrow fa fa-chevron-right"></i>
+					</label>
+
+					<div class="sidebar_category_content sidebar_category_price">
+						<label for="sidebar_valueFrom">From:</label>
+						<input id="sidebar_valueFrom" type="text">
+						<label for="sidebar_valueFrom">To:</label>
+						<input id="sidebar_valueFrom" type="text">
+					</div>
+
 				</article>
 
 				<button class="sidebar_search">Search</button>
@@ -231,6 +283,66 @@
 						<a href="#" class="activity_header_sort">Sort by: <span>Newest Activities</span><i class="activity_header_icon fa fa-chevron-down"></i></a>
 
 						<div class="activity_header_gridType">
+							<a class="activity_header_filter" href="#"><i class="fa fa-filter"></i><span></span></a>
+							<!-- START FILTER -->
+							<div class="filter">
+
+								<div class="filter_wrapper">
+									<!-- Keywords -->
+									<article class="filter_block">
+										<header class="filter_block_header">
+											<i class="fa fa-search"></i>
+											<p class="filter_block_title">Keywords:</p>
+										</header>
+										<div class="filter_block_content">
+											<input placeholder="Add keywords" type="text">
+										</div>
+									</article>
+									<!-- Keywords -->
+
+									<!-- Category -->
+									<article class="filter_block">
+										<header class="filter_block_header">
+											<i class="fa fa-search"></i>
+											<p class="filter_block_title">Category:</p>
+										</header>
+										<div class="filter_block_content">
+											<p>Show all</p>
+										</div>
+									</article>
+									<!-- Category -->
+
+									<!-- Reviews -->
+									<article class="filter_block">
+										<header class="filter_block_header">
+											<i class="fa fa-search"></i>
+											<p class="filter_block_title">Reviews:</p>
+										</header>
+										<div class="filter_block_content">
+											<!--START STAR RATING CLICK -->
+											<fieldset class="sidebar_category_content_review starRatingClick">
+												<input type="radio" id="score-5" name="score" value="5" />
+												<label title="5 stars" for="score-5">5 stars</label>
+
+												<input type="radio" id="score-4" name="score" value="4" />
+												<label title="4 stars" for="score-4">4 stars</label>
+
+												<input type="radio" id="score-3" name="score" value="3" />
+												<label title="3 stars" for="score-3">3 stars</label>
+
+												<input type="radio" id="score-2" name="score" value="2" />
+												<label title="2 stars" for="score-2">2 stars</label>
+
+												<input type="radio" id="score-1" name="score" value="1" />
+												<label title="1 stars" for="score-1">1 stars</label>
+											</fieldset>
+											<!-- END STAR RATING CLICK -->
+										</div>
+									</article>
+									<!-- Reviews -->
+								</div>
+							</div>
+							<!-- END FILTER -->
 							<a href="#"><i class="fa fa-list-ul"></i></a>
 							<a href="#"><i class="fa fa-th-large"></i></a>
 						</div>
