@@ -1,9 +1,10 @@
 .card_big
-    width 300px
+    width 304px
     height 360px
     background-color $white
     margin 0 10px
     text-align center
+    display inline-block
     &:first-of-type
         margin-left 0
     &:last-of-type
@@ -15,7 +16,7 @@
         background-size cover
         background-repeat no-repeat
         background-position center
-    img
+    > img
         margin-top 80px
         border-radius 50%
         width 30%
@@ -31,6 +32,8 @@
             border-top 1px solid $background-light-2
             padding 5px 10px
             height 45px
+            &:first-child
+                padding 10px
             p
                 font-weight $font-bold
                 font-size $font-size-xxs
@@ -46,3 +49,16 @@
                 right 10px
                 top 15px
                 font-size $font-size-xs
+            .followers
+                display inline-block
+                font-size $font-size-xs
+                left 5px
+                top 1px
+                span
+                    font-size $font-size-xxs
+                    font-weight $font-light
+            a
+                position absolute
+                right 10px
+                top 15px
+                font-size $font-size-xxs
