@@ -21,8 +21,8 @@ $(document).ready(function () {
 		e.preventDefault()
 		$('.filter').toggle()
 	});
-	$("#filter-close").click(function (e) {
+	$(".filter_button_close").click(function (e) {
 		e.preventDefault()
-		$('#filter').css('display', 'none')
+		$('.filter').css('display', 'none')
 	});
 });
