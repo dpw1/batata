@@ -292,9 +292,10 @@
 						</select>
 
 						<div class="activity_header_gridType">
-							<a class="activity_header_filter" href="#"><i class="fa fa-filter"></i><span>Filter</span></a>
+							<a id="activity-filter-btn" class="activity_header_filter" href="#"><i class="fa fa-filter"></i><span>Filter</span></a>
+
 							<!-- START FILTER -->
-							<div class="filter">
+							<div id="filter" class="filter">
 
 								<div class="filter_wrapper">
 									<!-- Keywords -->
@@ -312,11 +313,15 @@
 									<!-- Category -->
 									<article class="filter_block">
 										<header class="filter_block_header">
-											<i class="fa fa-search"></i>
+											<i class="fa fa-folder"></i>
 											<p class="filter_block_title">Category:</p>
 										</header>
 										<div class="filter_block_content">
-											<p>Show all</p>
+											<select name="" id="">
+												<option value="">Newest Activities</option>
+												<option value="">Newest Activities</option>
+												<option value="">Newest Activities</option>
+											</select>
 										</div>
 									</article>
 									<!-- Category -->
@@ -324,31 +329,75 @@
 									<!-- Reviews -->
 									<article class="filter_block">
 										<header class="filter_block_header">
-											<i class="fa fa-search"></i>
+											<i class="fa fa-star"></i>
 											<p class="filter_block_title">Reviews:</p>
 										</header>
 										<div class="filter_block_content">
 											<!--START STAR RATING CLICK -->
 											<fieldset class="sidebar_category_content_review starRatingClick">
-												<input type="radio" id="score-5" name="score" value="5" />
-												<label title="5 stars" for="score-5">5 stars</label>
+												<input type="radio" id="score-10" name="score" value="5" />
+												<label title="5 stars" for="score-10">5 stars</label>
 
-												<input type="radio" id="score-4" name="score" value="4" />
-												<label title="4 stars" for="score-4">4 stars</label>
+												<input type="radio" id="score-9" name="score" value="4" />
+												<label title="4 stars" for="score-9">4 stars</label>
 
-												<input type="radio" id="score-3" name="score" value="3" />
-												<label title="3 stars" for="score-3">3 stars</label>
+												<input type="radio" id="score-8" name="score" value="3" />
+												<label title="3 stars" for="score-8">3 stars</label>
 
-												<input type="radio" id="score-2" name="score" value="2" />
-												<label title="2 stars" for="score-2">2 stars</label>
+												<input type="radio" id="score-7" name="score" value="2" />
+												<label title="2 stars" for="score-7">2 stars</label>
 
-												<input type="radio" id="score-1" name="score" value="1" />
-												<label title="1 stars" for="score-1">1 stars</label>
+												<input type="radio" id="score-6" name="score" value="1" />
+												<label title="1 stars" for="score-6">1 stars</label>
 											</fieldset>
 											<!-- END STAR RATING CLICK -->
 										</div>
 									</article>
 									<!-- Reviews -->
+
+
+									<!-- City -->
+									<article class="filter_block">
+										<header class="filter_block_header">
+											<i class="fa fa-globe"></i>
+											<p class="filter_block_title">City:</p>
+										</header>
+										<div class="filter_block_content">
+
+											<div class="filter_block_content_checkbox">
+												<input name="" type="checkbox" />
+												<label for="">Online</label>
+											</div>
+
+											<div class="filter_block_content_checkbox">
+												<input name="" type="checkbox" />
+												<label for="">Local</label>
+											</div>
+
+										</div>
+									</article>
+
+									<!-- Price -->
+									<article class="filter_block">
+										<header class="filter_block_header">
+											<i class="fa fa-money"></i>
+											<p class="filter_block_title">Price:</p>
+										</header>
+										<div class="filter_block_content filter_block_price">
+
+											<label for="">From:</label>
+											<input id="" type="text">
+											<label for="">To:</label>
+											<input id="" type="text">
+
+										</div>
+									</article>
+									
+									<!-- FILTER BUTTONS -->
+									<div class="filter_button">
+										<a href="#" class="filter_button_search">Search</a>
+										<a href="#" id="filter-close" class="filter_button_close">Close</a>
+									</div>
 								</div>
 							</div>
 							<!-- END FILTER -->
@@ -610,6 +659,7 @@
 	<!-- END FOOTER -->
 
 	<!--SCRIPT-->
+	<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
 	<script src="../scripts/main.js"></script>
 
 </body>

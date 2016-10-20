@@ -14,8 +14,9 @@ $text-color-header = $text-color-light-1
 $text-color-content = $text-color-dark-1
 $icon-color = $text-color-dark-1
 
-$price-height = 40px
-$price-background = yellow
+$price-height = 30px
+$price-background = $background-light-4
+
 /* STYLE - General styling for this module.
 ========================================================================== */
 
@@ -129,7 +130,10 @@ $price-background = yellow
 .sidebar_category_price
 	input
 		width 40px
-		background gray
+		height $price-height
+		line-height $price-height
+		background $price-background
+		text-align center
 	*
 		display inline-block
 
