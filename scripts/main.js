@@ -17,9 +17,9 @@ $(document).ready(function () {
 
 	/* ACTIVITY SEARCH -
 	=========================================================================*/
-	$("#activity-filter-btn").click(function (e) {
+	$(".js--activity_header_filter").click(function (e) {
 		e.preventDefault()
-		$('#filter').toggle()
+		$('.filter').toggle()
 	});
 	$("#filter-close").click(function (e) {
 		e.preventDefault()
