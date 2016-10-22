@@ -1,21 +1,71 @@
 .how_it_works
-    .how_it_works_block_group
+    .how_it_works_container
         background-color $white
+        .how_it_works_group
+            display none
+            padding 20px 50px
+            &.open
+                display block
+        .how_it_works_footer
+            text-align center
+            padding 20px auto
+            p
+                font-size $font-size-sm
+            button
+                custom_button (standard sm)
+                margin 20px 0
     .how_it_works_block
         font-size 0
         height 300px
         margin 20px 0
-        &:nth-of-type(odd)
+        padding 20px
+        &:nth-of-type(even)
             img
                 float left
         .how_it_works_block_text
             font-size 1.5rem
             width 50%
             display inline-block
-            vertical-align top
+            vertical-align text-top
             padding 20px
+            h1
+                margin-top 0
         img
             width 50%
             height 100%
             display inline-block
-            vertical-align top
+            vertical-align text-top
+        +max-width(768px)
+            height auto
+            .how_it_works_block_text,
+            img
+                width 100%
+                float none
+    .how_it_works_list
+        margin 40px auto
+        li
+            width 70%
+            margin 0 auto
+            border 1px solid $background-light-3
+            overflow hidden
+            &.open
+                .how_it_works_list_header
+                    background-color $background-light-3
+                .how_it_works_list_text
+                    background-color $background-light-1
+                    padding 15px 20px
+                    max-height 200px
+            .how_it_works_list_header
+                font-size $font-size-sm
+                cursor pointer
+                padding 15px 20px
+                &:hover,
+                &.open
+                    background-color $background-light-3
+            .how_it_works_list_text
+                transition max-height .5s ease-in-out
+                max-height 0
+                
+        +max-width(768px)
+            li
+                width 100%

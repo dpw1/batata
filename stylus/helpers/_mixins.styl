@@ -62,7 +62,11 @@ max-breakpoint($point)
     @media (max-width: 480px)
       {block}
       
-
+max-width($point)
+    @media (min-width: 0) and (max-width: $point)
+        {block}
+    
+      
 /* Hover color mixins
 ========================================================================== */
       
