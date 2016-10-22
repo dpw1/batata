@@ -6,9 +6,11 @@
             padding 20px 50px
             &.open
                 display block
+            +max-width(768px)
+                padding 10px
         .how_it_works_footer
             text-align center
-            padding 20px auto
+            margin 20px 0
             p
                 font-size $font-size-sm
             button
@@ -16,11 +18,12 @@
                 margin 20px 0
     .how_it_works_block
         font-size 0
-        height 300px
+        height 400px
         margin 20px 0
         padding 20px
+        overflow: hidden;
         &:nth-of-type(even)
-            img
+            .img
                 float left
         .how_it_works_block_text
             font-size 1.5rem
@@ -30,17 +33,24 @@
             padding 20px
             h1
                 margin-top 0
-        img
+        .img
             width 50%
             height 100%
+            background-size cover
+            background-position center
+            background-repeat no-repeat
             display inline-block
             vertical-align text-top
         +max-width(768px)
             height auto
+            padding 10px
             .how_it_works_block_text,
-            img
+            .img
+                margin-bottom 10px
                 width 100%
                 float none
+            .img
+                height 300px
     .how_it_works_list
         margin 40px auto
         li
