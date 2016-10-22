@@ -1,0 +1,1 @@
+.header_list{padding:20px;border-bottom:1px solid $background-light-3;}.header_list p{margin:0 20px;display:inline-block;cursor:pointer;}.header_list p.selected{font-weight:$font-bold}
