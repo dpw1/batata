@@ -97,7 +97,7 @@ $item-user-bg = $white
 		width: 60%
 		margin-top $margin-vertical
 		margin-bottom 0
-
+		line-height 20px
 
 	.activity_item_userName
 		font-size $font-size-xxxs
@@ -124,7 +124,10 @@ $item-user-bg = $white
 	margin-top $margin-vertical	- 8px
 	display inline-block
 	float left
-	
+	margin-top: -8px;
+	>.starRating
+		width 100%
+		margin-top 20px
 /* ITEM PRICE */
 
 .activity_item_price
@@ -160,6 +163,7 @@ $item-user-bg = $white
 		white-space: nowrap;
 		overflow hidden
 		
+		
 	.activity_item_review
 		width 257px
 		
@@ -183,7 +187,6 @@ $item-user-bg = $white
 +max-breakpoint(sm)
 	.activity_item
 		height auto !important
-	
 +max-breakpoint(xxs)
 	.activity_item_price
 		width 30%
@@ -195,6 +198,8 @@ $item-user-bg = $white
 		div
 			right 0
 			left auto
+	.activity_item_review
+		margin-top -30px
 
 +max-breakpoint(xxxs)
 	.activity_header_gridType
@@ -214,4 +219,6 @@ $item-user-bg = $white
 	.activity_header
 		*
 			font-size $font-size-xxxs
-		
+	.activity_item_follower
+		margin-left 163px
+		top -20px
