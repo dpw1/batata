@@ -1,0 +1,137 @@
+/* VARIABLES - Variables used in this module.
+========================================================================== */
+
+$input-height = 33px
+$input-padding = 5px
+$color = $background-light-3	
+
+$hints-height = 245px
+$margin-bottom = 15px
+
+
+
+
+/* STYLE - General styling for this module.
+========================================================================== */
+
+.postActivity
+	.postActivity_title, .postActivity_subtitle
+		text-align center
+	.postActivity_subtitle
+		margin-bottom 50px
+
+.postActivity_form
+	border-radius 3px
+	background white
+	width 100%
+	padding-left 20px
+	padding-top 10px
+	margin-bottom $margin-bottom 
+.postActivity_inputBlock
+	display inline-block
+	margin-bottom $margin-bottom 
+
+	position relative
+	label
+		display block
+		width 100%
+		font-weight $font-bold
+		color $text-color-dark-3
+	input
+		line-height $input-height
+	input, textarea
+		width 90%
+		height $input-height
+		padding-left $input-padding
+		border 1px solid $background-light-3
+		margin-right 5px
+	textarea
+		height $input-height * 4
+		
+	i
+		position relative
+		top 7px	
+		left 5px
+		font-size $font-size-lg
+		color lightblue
+		display inline-block
+
+	&:nth-child(1)
+		width 100%
+	&:nth-child(2)
+		width 67%
+		margin-right 20px
+	&:nth-child(3)
+		width 29%
+		input
+			width 69%
+	&:nth-child(4)
+		width 100%
+		label
+			margin-bottom 10px
+		textarea
+			width 91%
+		i
+			top -($input-height * 1.7)px
+			
+/* Post Activity Warnings */
+.postActivity_hints
+	background $white
+	border-radius 3px
+	padding 15px 25px
+	margin-bottom $margin-bottom 
+
+	h2
+		margin-bottom 15px
+	p
+		margin-bottom 10px
+	
+	.postActivity_hints_list
+		li
+			text-align justify
+			margin-bottom 10px
+			i
+				margin-right 15px
+				
+.postActivity_buttons
+	margin-bottom 60px
+	height auto
+	background yellow
+	width 100%
+	position relative
+	div
+		position absolute
+		right 0
+		.postActivity_save
+			custom_button (reject sm)
+			margin-right 15px
+		.postActivity_publish
+			custom_button (standard sm)
+		*
+			width 120px
+			float left
+			
+
+/* BREAKPOINTS - Customizations for each specific breakpoint.
+========================================================================== */
++max-breakpoint(lg)
+	.postActivity_inputBlock
+		&:nth-child(2)
+			input
+				width 89%
+		&:nth-child(3)
+			width 28%
+
+
++max-breakpoint(xxs)
+	.postActivity_inputBlock
+		width 100% !important
+		input, textarea
+			width 90% !important
+			
++max-breakpoint(xxxs)
+	.postActivity_inputBlock
+		input, textarea
+			width 75% !important
+	.postActivity_save, .postActivity_publish
+		width 110px !important
