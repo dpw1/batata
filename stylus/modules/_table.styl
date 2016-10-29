@@ -1,0 +1,91 @@
+/* VARIABLES - Variables used in this module.
+========================================================================== */
+
+$content-background = $white
+$border-radius = 2px
+$header-background = $background-light-1
+$header-height = 48px
+
+$margin-vertical = 21px
+
+$item-user-height = 110px
+$item-user-bg = $white
+
+/* STYLE - General styling for this module.
+========================================================================== */
+
+.table
+	width 100%
+.table_wrapper
+	width 95%
+	margin 0 auto
+	overflow hidden
+.table_header
+	background $header-background
+	border-top-left-radius $border-radius
+	border-top-right-radius $border-radius
+	height $header-height
+	line-height $header-height
+	border-bottom 1px solid $background-light-2
+	font-weight $font-normal
+	textHover($text-color-dark-1)
+	width 100%
+	
+.table_item
+	margin 10px 0
+	width 100%
+	background yellow
+	height $item-user-height
+	position relative
+	overflow hidden
+	backgroundHover(#fff)
+	
+/* Table Item User */
+	.table_item_user
+		float left
+		height $item-user-height
+		width 380px
+		display inline-block
+	.table_item_pic
+		height $item-user-height
+		line-height $item-user-height
+		width 68px
+		float left
+		margin-right 5px
+		img
+			border-radius 50%
+	.table_item_title
+		display inline-block
+		font-size $font-size-xs
+		position relative
+		width 60%
+		margin-top $margin-vertical
+		margin-bottom 0
+		line-height 20px
+	.table_itemHolder
+		.table_item_userName
+			font-size $font-size-xxxs
+			position relative
+			left 0
+			textHover($text-link-color)
+			
+		.table_item_follower
+			font-size $font-size-xxxs
+			&:before
+				content '|'
+				margin 0 5px
+	.table_item_userLocation
+		font-size $font-size-xxxs
+
+	.table_item_qt
+		display inline-block
+		height $item-user-height
+		line-height $item-user-height
+		width 70px
+		padding-top 28px
+		select
+			font-size $font-size-sm
+			font-weight $font-bold
+			padding 2px 7px
+			border 1px solid $background-light-2
+	
