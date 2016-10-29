@@ -1,33 +1,61 @@
 .card_small
     height 200px
-    width 140px
+    width 185px
     display inline-block
     background-color $white
     text-align center
     padding 10px
-    margin 0 10px
-    &:first-of-type
-        margin-left 0
-    &:last-of-type
-        margin-right 0
-    img
-        border-radius 50%
-        width 70%
-        border 5px solid $background-light-2
-    p
-        font-weight $font-bold
-        font-size $font-size-xxxs
+    margin 5px 10px
+    overflow hidden
+    border 1px solid $background-light-3
+    border-radius 5px
+    +max-width(768px)
+        width 100%
         margin 5px 0
-    small
-        font-size $font-size-xxxxs
+    &:hover
+        .card_small_front
+            top 35px
+            border-top 1px solid $background-light-4
+    .card_small_back
+        position relative
+        z-index 1
+        display flex;
+        justify-content space-between
+        align-items center
+        small
+            font-size $font-size-xxxs
+            display inline-block
+            width 70%
+            text-align right
+        fieldset
+            display inline-block
+    .card_small_front
+        position absolute
+        top 0
+        left 0
+        width 100%
+        padding 10px
+        cursor pointer
+        transition top .2s ease-in-out
+        z-index 2
+        background-color $white
+        .profile_img
+            border-radius 50%
+            width 100px
+        p
+            font-weight $font-bold
+            font-size $font-size-xxxs
+            margin 5px 0
+    
     .card_footer
         position absolute
         bottom 0
         left 0
         padding 5px 10px
-        border-top 1px solid $background-light-4
         width 100%
         text-align left
+        background-color $white
+        z-index 3
         .pricingBlock_price
             font-size $font-size-xs
         i
