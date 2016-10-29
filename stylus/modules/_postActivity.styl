@@ -133,7 +133,40 @@ $margin-bottom = 15px
 		height 100%
 		cursor pointer
 		top 0px
-
+		
+.--postActivity_type
+	display block
+	.--postActivity_type_block
+		input
+			display inline-block
+			width 5%	
+			width 15px
+			top 10px
+		> label
+			display inline-block
+			width 94%
+		> input:checked + label
+			cursor default
+		> input:nth-of-type(2):checked ~ .--postActivity_location
+			display block
+		>.--postActivity_location
+			display none 
+			clear left
+			.--postActivity_location_block
+				float left
+				width 45%
+				label
+					width 90%
+					display inline-block
+					font-size $font-size-xxxs
+				input:checked ~ .postActivity_inputBlock
+					display none
+				>.postActivity_inputBlock
+					width 100%
+					input
+						width 83%
+					i
+						top 17px
 /* BREAKPOINTS - Customizations for each specific breakpoint.
 ========================================================================== */
 +max-breakpoint(lg)
@@ -143,17 +176,21 @@ $margin-bottom = 15px
 				width 89%
 		&:nth-child(3)
 			width 28%
-
-
+	.--postActivity_location
+		>.postActivity_inputBlock
+			input
+				width 86% !important
 +max-breakpoint(xxs)
 	.postActivity_inputBlock
 		width 100% !important
-		input, textarea
+		> input, > textarea
 			width 90% !important
-			
+	.--postActivity_location_block
+		width 100% !important
+	
 +max-breakpoint(xxxs)
 	.postActivity_inputBlock
-		input, textarea
+		> input, > textarea
 			width 75% !important
 	.postActivity_save, .postActivity_publish
 		width 110px !important

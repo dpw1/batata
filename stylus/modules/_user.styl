@@ -5,10 +5,6 @@ $background = $white
 $padding = 15px
 /* STYLE - General styling for this module.
 ========================================================================== */
-
-.me
-	background lightblue
-
 .user
 	background $background
 	width 100%
@@ -16,10 +12,13 @@ $padding = 15px
 	padding-top $padding
 	margin-bottom 10px
 	.user_pic
+		width 95px
 		display inline-block
 		padding-left $padding
 		float left
 		border-radius 50%
+		max-height 95px
+		height auto
 	.user_info
 		width 52%
 		display inline-block
