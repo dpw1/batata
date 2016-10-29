@@ -37,9 +37,9 @@ $margin-bottom = 15px
 		width 100%
 		font-weight $font-bold
 		color $text-color-dark-3
-	input
+	input, select
 		line-height $input-height
-	input, textarea
+	input, textarea, select
 		width 90%
 		height $input-height
 		padding-left $input-padding
@@ -48,7 +48,8 @@ $margin-bottom = 15px
 	textarea
 		height $input-height * 4
 		resize none
-		
+	select
+		width 89,5%
 	i
 		position relative
 		top 7px	
@@ -172,7 +173,7 @@ $margin-bottom = 15px
 +max-breakpoint(lg)
 	.postActivity_inputBlock
 		&:nth-child(2)
-			input
+			select
 				width 89%
 		&:nth-child(3)
 			width 28%
@@ -183,14 +184,14 @@ $margin-bottom = 15px
 +max-breakpoint(xxs)
 	.postActivity_inputBlock
 		width 100% !important
-		> input, > textarea
+		> input, > textarea, > select
 			width 90% !important
 	.--postActivity_location_block
 		width 100% !important
 	
 +max-breakpoint(xxxs)
 	.postActivity_inputBlock
-		> input, > textarea
+		> input, > textarea, >select
 			width 75% !important
 	.postActivity_save, .postActivity_publish
 		width 110px !important
