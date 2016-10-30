@@ -12,3 +12,50 @@
 		z-index 1
 .cart_item
 	margin 0
+	border-bottom 1px solid $background-light-2
+.cartTotal_item
+	margin 0
+	height auto
+	padding 20px 0
+	> a
+		custom_button (standard sm)
+		text-align center
+		margin-top 10px
+		left 50%
+		transform translateX(-50%)
+	&:hover
+		background $white !important
+		
+.cart_footer
+	background $white
+	padding 10px 0
+	margin-bottom 40px
+	h2,.pricingBlock
+		display inline-block
+	a
+		custom_button (standard md)
+		float right
+		margin-top 5px
+/* BREAKPOINTS - Customizations for each specific breakpoint.
+========================================================================== */
+
++max-breakpoint(md)
+	.cartTotal
+		display none
++max-breakpoint(xs)
+	.cart_item
+		height auto
++max-breakpoint(xxs)
+	.cart_item
+		height auto
+	.cart_item_qt
+		width 80%
++max-breakpoint(xxxs)
+	.cart_header
+		a
+			display none
+	.cart_footer
+		a
+			float none
+			left 50%
+			transform translateX(-50%)

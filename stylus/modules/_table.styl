@@ -82,10 +82,37 @@ $item-user-bg = $white
 		height $item-user-height
 		line-height $item-user-height
 		width 70px
-		padding-top 28px
+		padding-top 28px		
 		select
 			font-size $font-size-sm
 			font-weight $font-bold
 			padding 2px 7px
 			border 1px solid $background-light-2
+	.table_item_price
+		display inline-block
+		position absolute
+		right 0
+		bottom 0
+		height $item-user-height
+		width 89px
+		margin-top 15px
+		i
+			float right
+			font-size $font-size-sm
+			margin-top 20px
+		> p 
+			margin-top 65px
+			bottom 0
+			text-align right
+	
+/* BREAKPOINTS - Customizations for each specific breakpoint.
+========================================================================== */
+
++max-breakpoint(md)
+	.table_item_price
+		width 20%
+		
++max-breakpoint(xxs)
+	.table_item_price
+		width 30%
 	
