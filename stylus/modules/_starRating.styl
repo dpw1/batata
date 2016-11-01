@@ -11,7 +11,20 @@ $text-margin-top = 6px
 .starRating
   *
     color $yellow
-
+  &.--starRating_profile
+    width 100%
+    p.starRating_value
+      rate
+        margin-top 5px
+        color $text-color-dark-2
+    span.starRating_value
+     margin-top 9px
+     margin-right 10px
+     &:last-of-type
+       float right
+    *
+      float left
+      
 .starRating_imgWrapper
   display inline-block
   font-size $star-size
@@ -48,3 +61,4 @@ $text-margin-top = 6px
   font-size $font-size-xxxs
   margin-top $text-margin-top
   display inline-block
+  
