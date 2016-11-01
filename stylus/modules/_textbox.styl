@@ -8,6 +8,19 @@ $subtitle-size = 0
 ========================================================================== */
 
 .textbox
+    .tags
+        margin 10px 0
+        a
+            margin 0 5px
+            color $text-color-dark-2
+            padding 5px
+        a:first-child,
+        a:hover
+            display inline-block
+            background-color lightgray
+            border-radius 3px
+        a:not(:first-child):before
+            content "#"
 	&.textbox--sm
 		$title-size = $font-size-md
 		$subtitle-size = $font-size-sm
