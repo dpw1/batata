@@ -1,0 +1,45 @@
+.profile
+	background white
+
+.profile_wrapper
+	padding 0 20px
+
+.profile_main
+	padding 20px 0
+	background white
+	margin 0 auto
+	
+	img
+		height 238px
+		width 100%
+		display block
+		text-align center
+		margin 0 auto
+		padding-bottom 20px
+		margin-bottom 15px
+		border-bottom 1px solid $background-light-2
+		
+.profile_main_block
+	>header
+		i,p
+			display inline-block
+		>p
+			font-weight $font-bold
+			font-size $font-size-xxxs
+	> .profile_main_skills
+		margin 15px 0
+		margin-left 15px	
+	> .profile_main_tag
+		display inline-block
+		background gray
+		border-radius 3px
+		padding 0 7px
+		*
+			display inline-block
+		p
+			&:before
+				content '#'
+			&:after
+				content '|'
+				margin 0 3px
+		
