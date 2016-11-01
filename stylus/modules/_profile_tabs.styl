@@ -1,0 +1,21 @@
+.profile_tabs
+	.profile_tabs_container
+		background $white
+		input
+			display none
+		input:checked + label
+			font-weight $font-bold
+		> label
+			cursor pointer
+			line-height 50px
+			margin-left 20px
+		.profile_tabs_group
+			display none
+			padding 20px 50px
+			border-top 1px solid
+			+max-width(768px)
+				padding 10px
+				
+		input:nth-of-type(1):checked ~ .profile_tabs_group:nth-of-type(1),
+		input:nth-of-type(2):checked ~ .profile_tabs_group:nth-of-type(2),	input:nth-of-type(3):checked ~ .profile_tabs_group:nth-of-type(3)
+			display block

@@ -1,12 +1,12 @@
 .profile
-	background white
+	background $white
 
 .profile_wrapper
 	padding 0 20px
 
 .profile_main
 	padding 20px 0
-	background white
+	background $white
 	margin 0 auto
 	
 	img
@@ -21,22 +21,26 @@
 		
 .profile_main_block
 	>header
+		margin-bottom 10px
 		i,p
 			display inline-block
 		>p
 			font-weight $font-bold
 			font-size $font-size-xxxs
 	> .profile_main_skills
-		margin 15px 0
+		margin-bottom 15px
 		margin-left 15px	
 	> .profile_main_tag
 		display inline-block
-		background gray
+		margin-left 15px
+		background $background-light-2
 		border-radius 3px
 		padding 0 7px
 		*
 			display inline-block
 		p
+			font-weight $font-bold
+			font-size $font-size-xxs
 			&:before
 				content '#'
 			&:after
