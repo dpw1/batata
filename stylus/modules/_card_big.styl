@@ -9,6 +9,7 @@
     text-align center
     display inline-block
     overflow hidden
+    position relative
     +max-width(1170px)
         width 280px
     +max-width(1024px)
@@ -113,3 +114,10 @@
                 right 10px
                 top 15px
                 font-size $font-size-xxs
+
+	.card_big_button
+		position absolute
+		z-index 4
+		top 12px
+		right 10px
+		custom_button (reject sm)
