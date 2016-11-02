@@ -1,4 +1,6 @@
 .profile_tabs
+	margin-top 20px
+	margin-bottom 80px
 	.profile_tabs_container
 		background $white
 		input
@@ -12,10 +14,41 @@
 		.profile_tabs_group
 			display none
 			padding 20px 50px
-			border-top 1px solid
 			+max-width(768px)
 				padding 10px
 				
 		input:nth-of-type(1):checked ~ .profile_tabs_group:nth-of-type(1),
 		input:nth-of-type(2):checked ~ .profile_tabs_group:nth-of-type(2),	input:nth-of-type(3):checked ~ .profile_tabs_group:nth-of-type(3)
 			display block
+			
+.profile_tabs_header
+	width 95%
+	margin 0 auto
+	border-bottom 1px solid $background-light-2
+	padding-bottom 15px
+	p
+		&:first-child
+			display inline-block
+	> div
+		float right
+		&:before
+			font-family FontAwesome
+			content '\f175'
+			margin-right 5px
+	
++max-breakpoint(md)
+	.profile_tabs_price
+		top -38px
+		float right
+		height auto
+	
++max-breakpoint(xxxs)
+	.profile_tabs_header
+		padding 20px 0
+		> p
+			&:first-child
+				display none !important
+		> div
+			float none
+			display block
+			text-align center
