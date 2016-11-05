@@ -35,12 +35,15 @@ input[type="submit"]{
     background: none;
 }
 .wrapper{
-    width 90%
+    width 95%
     max-width 1170px
     margin 0 auto
 }
 
 .container {
-    padding-left 0 !important;
-    padding-right 0 !important;
+    padding-left 0 !important
+    padding-right 0 !important
+    @media (min-width: 768px) {
+        width auto !important
+    }
 }
