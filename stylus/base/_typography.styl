@@ -19,7 +19,14 @@ $font-normal = 400;
 $font-bold = 700;
 
 
-*:not(i) {
-    font-family: 'Gotham', sans-serif !important;
+@font-face{
+    font-family: Gotham;
+    src: url("../../fonts/Gotham.ttf");
+}
+body{
+    font-family: Gotham;
+}
+*:not(i){
+    font-family: Gotham, Verdana, sans-serif
     color: $text-color-dark-1;
 }

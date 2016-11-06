@@ -2,24 +2,17 @@
 ========================================================================== */
 
 /* font color */
-$text-color = $text-color-light-1;
-$text-color-hover = $text-color-light-1;
-
-/* header_top */
-$colors = (#d14c31 #db7b33 #e4af56 #f2d3a5 #efecaf #fcf564 #ccdc55 #669752 #385826 #4675ad #6fb0e2 #9cd3ea #cbe9f2 #d8e6e9);
-$items = 14;
-$height = 5px;
-$input-background = $gray-shade-1;
+$text-color = $text-color-dark-2;
 
 /* header_main */
-$background = $background-dark-1;
+$background = $white;
 $menu-height = 60px;
 
 /* header_bottom */
-$menu-bottom-height = 28px
+$menu-bottom-height = 35px
 $menu-bottom-background = $white
 $menu-bottom-margin-right = 14px
-$header-bottom-font-color = $text-color-dark-1
+$header-bottom-font-color = $text-color-dark-3
 
 /* mobile */
 $margin-horizontal = 20px
@@ -30,36 +23,30 @@ $margin-horizontal = 20px
 .header
     //margin-bottom 15px
 
-/* header_top
-======================== */
-.header_top
-    width 100%
-    height $height
-    
-.header_top > div
-  display inline;
-  width: (100 / $items)%;
-  height: $height;
-  float: left;
-  
-  for each in (0..$items)
-  	  &:nth-child({each + 1})
-          background $colors[each]
-	  
-
 /* header_main
 ======================== */  
 .header_main{
 	height $menu-height
 	line-height $menu-height
 	background $background;
+	border-bottom 1px solid $background-light-4
 }
 
 .header_main_logo{
 	float left;
+	display inline-block
+	cursor pointer
+	z-index 1
 	img{
+		width 40px
 		margin-bottom 3px
 	}
+	p{
+		text-transform uppercase
+		font-weight $font-light
+		display inline-block
+		font-size $font-size-xs
+ 	}
 }
 
 .header_main_itemWrapper
@@ -82,7 +69,8 @@ $margin-horizontal = 20px
 .header_main_search
 	position relative
 	display inline-block
-	margin-left 64px !important
+	margin-left 80px
+	margin-right 20px
 
 	.header_main_search_icon
 		position absolute
@@ -94,15 +82,16 @@ $margin-horizontal = 20px
 		z-index 1
 	
 	.header_main_search_input
+		width 180px
 		border-radius 20px
-		border none
+		border 1px solid $background-light-4
 		height 32px
 		line-height 32px
 		padding-left 40px
-		max-width 165px
 		font-size $font-size-xxs
 		background $input-background
 		color $text-color-dark-1
+		box-shadow $background-light-4 1px 1px 5px inset 
 		&:focus
 			outline 0
 
@@ -126,7 +115,7 @@ $margin-horizontal = 20px
 	display inline-block
 	width 70px
 	position relative
-
+	margin-right 15px
 	.header_main_profile_pic
 		img
 			border-radius 50%
@@ -134,7 +123,7 @@ $margin-horizontal = 20px
 
 .header_main_profile_icon
     color #64c2c7
-    textHover(#64c2c7)
+    textHover($red)
     margin-left 10px
 		
 		
@@ -144,11 +133,11 @@ $margin-horizontal = 20px
 	height 32px
 	line-height 32px
 	border-radius 5px
-	background $black
+	background transparent
 
 	
 	.header_main_action_item
-		textHover($text-color-light-1) 
+		textHover($text-color-dark-2) 
 		position relative
 		display inline-block
 		width 30px
@@ -156,6 +145,7 @@ $margin-horizontal = 20px
 		text-align center
 		min-width 30px
 		max-width 30px
+		font-size $font-size-sm
 		/* Right border */
 		&:after
 			content ''
@@ -191,28 +181,32 @@ $margin-horizontal = 20px
     line-height $menu-bottom-height
     width 100%
     display inline-block
+	margin 0 auto
     &:last-child
         margin-right 0
 
+.header_bottom_wrapper
+	width fit-content
+	margin auto
 .header_bottom_item
     display inline-block
     font-size $font-size-xxs
     font-weight $font-bold
-    color $header-bottom-font-color
+    textHover($header-bottom-font-color) 
     margin-right $menu-bottom-margin-right
     line-height $menu-bottom-height
-	
-/* BREAKPOINTS - Customizations for each specific breakpoint.
-========================================================================== */
+
 
 /* BREAKPOINTS - Customizations for each specific breakpoint.
 ========================================================================== */
 
-+max-breakpoint(lg)	
++max-breakpoint(lg)
 	.header_main_search
-		margin-left 72px
-	.header_main_action
-		display none
+		margin-left 40px
+	.header_main_post
+		width 50px !important
+		span
+			display none
 
 +max-breakpoint(md)
 	.header_main_logo
@@ -222,7 +216,7 @@ $margin-horizontal = 20px
 	.header_main_mobileMenu
 		width 5%
 		display block
-		textHover($white)
+		textHover($background-dark-1)
 		float left
 		margin-left $margin-horizontal
 		i
@@ -231,4 +225,5 @@ $margin-horizontal = 20px
 	.headerMobileCollapse
 		display none
 
+	
     
