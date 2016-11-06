@@ -27,7 +27,9 @@
 		background $white !important
 		
 .cart_finalPrice
-	width 158px
+	width 223px
+	>p
+		display inline-block
 		
 .cart_footer
 	background $white
@@ -57,11 +59,6 @@
 	.cart_header
 		a
 			display none
-	.cart_footer
-		a
-			float none
-			left 50%
-			transform translateX(-50%)
 	.cart_item_title
 		width 50%
 		font-size $font-size-xxxs
@@ -69,4 +66,15 @@
 		width 35%
 		font-size $font-size-xxxs
 		> p
-			margin-top 78px
+			margin-top 76px
+			font-size $font-size-xs
+	
++max-width(523px)
+	.cart_finalPrice
+		width 100%
+		text-align center
+	.cart_footer
+		a
+			float none
+			left 50%
+			transform translateX(-50%)
