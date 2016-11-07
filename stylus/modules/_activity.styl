@@ -154,7 +154,7 @@ $item-user-bg = $white
 	*
 		font-size $font-size-xxs
 		font-weight $font-normal
-	&:before, &:after
+	&:before
 		content '|'
 		font-weight $font-light
 		display inline-block
@@ -162,6 +162,12 @@ $item-user-bg = $white
 		width 1px
 		padding 0 15px
 		color $background-light-2
+	&:after
+		content ''
+		display inline-block
+		width 10px
+		height 10px
+		background transparent
 			
 /* BREAKPOINTS - Customizations for each specific breakpoint.
 ========================================================================== */
