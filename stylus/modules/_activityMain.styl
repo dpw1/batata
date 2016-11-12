@@ -1,4 +1,14 @@
 .activityMain
+    .activityMain_main
+        +max-width(512px)
+            padding 0
+    aside
+        +max-width(512px)
+            padding 0
+        &:after
+            content ""
+            display block
+            clear both
     .card_big
         margin 0
         width 360px
@@ -71,6 +81,52 @@
     .desktop
         +max-width(992px)
             display none
+    button.proceed
+        custom_button(standard, sm)
+        float right
+        i
+            margin-left 5px
+    .balance
+        .activityMain_card_section
+            font-size 0
+            .balance_tab
+                width 25%
+                display inline-block
+                text-align center
+                border-left 1px solid $background-light-3
+                padding 0 10px
+                &:first-of-type
+                    border-left none
+                +max-width(512px)
+                    width 50%
+                    margin-bottom 10px
+                    border-left none
+                    &:nth-of-type(2n + 2)
+                        border-left 1px solid $background-light-3
+                p
+                    font-size $font-size-xxxs
+                    color $text-color-dark-3
+                span
+                    font-size $font-size-md
+                    display block
+                    margin-top 5px
+                    color $text-color-dark-3
+                    word-wrap break-word
+            .balance_total
+                margin-top 40px
+                p
+                    font-size $font-size-xxxs
+                    text-transform uppercase
+                    display inline-block
+                    span
+                        font-weight $font-bold
+                funds
+                    float right
+                    font-size $font-size-xxxs
+                    text-transform uppercase
+                    span
+                        color $green
+                        font-size $font-size-md
     .activityMain_card
         border 1px solid $background-light-2
         background-color $white
@@ -260,3 +316,136 @@
                     filter grayscale(1)
                     &:hover
                         filter grayscale(0)
+            input
+                background-color $background-light-2
+                padding 5px 10px
+                border-radius 3px
+            input[type=text]
+                vertical-align middle
+                width 80%
+            .fa-check-circle
+                color $blue
+                font-size $font-size-md
+                vertical-align middle
+            .valueInput
+                width 60px
+                padding 5px
+                font-size $font-size-xxs
+                margin-top 20px
+            small
+                display block
+                text-align center
+                margin-top 10px
+                line-height 15px
+            > label
+                font-size $font-size-xxs
+                display block
+    .history
+        margin 20px 0
+        padding 0 15px
+        +max-width(512px)
+            padding 0
+        .history_filters
+            line-height 50px
+            &:after
+                content ""
+                display block
+                clear both
+            p
+                display inline-block
+                margin-right 50px
+                text-transform uppercase
+                font-size $font-size-xxs
+            select
+                padding 5px 10px
+                text-transform uppercase
+                background-color transparent
+                border 1px solid $background-light-3
+                border-radius 3px
+                font-size $font-size-xxs
+                +max-width(512px)
+                    display block
+                    margin-bottom 10px
+                    width 100%
+            a
+                float right
+                font-size $font-size-xxxs
+                color $blue
+        .history_table
+            font-size 0
+            background-color $white
+            .ht_col1,
+            .ht_col2,
+            .ht_col3,
+            .ht_col4,
+            .ht_col5,
+            .ht_col6
+                display inline-block
+                font-size $font-size-xxs
+                padding 20px
+                vertical-align middle
+                +max-width(512px)
+                    padding 5px
+            .ht_col1
+                min-width 80px
+                width 20%
+                padding-left 20px
+                +max-width(992px)
+                    display none
+                img
+                    float left
+                    border-radius 50%
+                    width 40px
+                    margin-right 10px
+                a
+                    text-decoration underline
+            .ht_col2
+                min-width 300px
+                width 35%
+                p
+                    font-weight $font-bold
+                    font-size $font-size
+                +max-width(992px)
+                    width 60%
+                    min-width 100px
+                    p
+                        font-size $font-size-xxxxs
+            .ht_col3
+                min-width 50px
+                width 15%
+                p
+                    color $orange
+                    font-size $font-size-sm
+                    font-weight $font-bold
+                +max-width(992px)
+                    width 20%
+                    p
+                        font-size $font-size-xxxxs
+            .ht_col4
+                min-width 80px
+                width 15%
+                +max-width(992px)
+                    display none
+            .ht_col5
+                min-width 80px
+                width 15%
+                +max-width(992px)
+                    display none
+            .ht_col6
+                width 20%
+                display none
+                p
+                    color $orange
+                    font-size $font-size-sm
+                    font-weight $font-bold
+                +max-width(992px)
+                    display inline-block
+                    p
+                        font-size $font-size-xxxxs
+            .history_table_header
+                background-color $background-light-1
+                border-bottom 1px solid $background-light-2
+                p
+                    font-weight $font-bold
+                    +max-width(512px)
+                        font-size $font-size-xxxxs
