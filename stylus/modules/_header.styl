@@ -170,9 +170,7 @@ $margin-horizontal = 20px
     max-width 200px
     display inline-block
     margin-left 15px
-	
-.header_main_mobileMenu
-	display none
+
 /* header_bottom
 ======================== */  
 
@@ -197,6 +195,21 @@ $margin-horizontal = 20px
     margin-right $menu-bottom-margin-right
     line-height $menu-bottom-height
 
+/* MOBILE MENU */
+	
+.header_main_mobileMenu
+	display none
+	
+.header_main_mobileMenu + label, .navWrapper
+	transition left 0.2s
+	
+.header_main_mobileMenu:checked + label
+	left 200px
+	
+.header_main_mobileMenu:checked ~ .navWrapper
+	position absolute
+	left 200px
+	box-shadow 0 0 5px 5px black
 
 /* BREAKPOINTS - Customizations for each specific breakpoint.
 ========================================================================== */

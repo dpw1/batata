@@ -96,7 +96,7 @@ $item-user-bg = $white
 		display: inline-block;
 		font-size: 14px;
 		position: relative;
-		width: 60%
+		width: 80%
 		margin-top $margin-vertical
 		margin-bottom 0
 		line-height 20px
@@ -174,9 +174,11 @@ $item-user-bg = $white
 
 +max-breakpoint(lg)
 	.activity_item_title
-		text-overflow: ellipsis;
+		/*text-overflow: ellipsis;
 		white-space: nowrap;
-		overflow hidden
+		overflow hidden*/
+		font-size $font-size-xxxs
+		width 75%
 		
 		
 	.activity_item_review
@@ -240,3 +242,7 @@ $item-user-bg = $white
 	.activity_item_follower
 		margin-left 194px
 		top -20px
+		
++max-width(321px)
+	.activity_item_review
+		margin-top 20px !important
