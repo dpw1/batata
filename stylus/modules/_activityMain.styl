@@ -63,6 +63,14 @@
                     z-index 1
                     &:not(:first-of-type)
                         opacity .5
+                        
+    .mobile
+        display none
+        +max-width(992px)
+            display block
+    .desktop
+        +max-width(992px)
+            display none
     .activityMain_card
         border 1px solid $background-light-2
         background-color $white
