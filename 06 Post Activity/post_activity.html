@@ -80,7 +80,7 @@
 
 						<a href="#" class="header_main_post">
 							<i class="fa fa-pencil-square-o "></i>
-							<span>Post Activity</span>
+							<span>Sign in</span>
 						</a>
 					</nav>
 				</div>
@@ -108,8 +108,10 @@
 	<!-- START BREADCRUMB -->
 	<nav class="nav breadcrumb">
 		<div class="container">
-			<a href="#" class="breadcrumb_item">Home</a>
-			<p class="breadcrumb_item">Marketing & Advertising</p>
+			<div class="col-md-12">
+				<a href="#" class="breadcrumb_item">Home</a>
+				<p class="breadcrumb_item">Marketing & Advertising</p>
+			</div>
 		</div>
 	</nav>
 	<!-- END BREADCRUMB -->
@@ -118,8 +120,10 @@
 
 	<section class="postActivity">
 		<div class="container">
-			<h2 class="postActivity_title">Your Are Almost There!</h2>
-			<p class="postActivity_subtitle">Fill in the information required and get ready to sell your activities!</p>
+			<div class="col-md-12">
+				<h2 class="postActivity_title">Your Are Almost There!</h2>
+				<p class="postActivity_subtitle">Fill in the information required and get ready to sell your activities!</p>
+			</div>
 
 			<div class="col-md-8">
 				<form class="postActivity_form --clearfix">
@@ -162,16 +166,23 @@
 						<label for="">Type of Activity</label>
 
 						<div class="--postActivity_type_block">
-							<input type="radio" name="tab" value="1" checked="checked">
+							<!--<input type="radio" name="tab" value="1" checked="checked">
 							<label for="tab"><span>Online</span></label>
 
 							<input type="radio" name="tab" value="2">
-							<label for="tab"><span>Local</span></label>
+							<label for="tab"><span>Local</span></label>-->
+
+
+							<input class="customCheckbox" type="radio" name="check" value="1" checked="checked" id="check1">
+							<label class="customCheckbox" for="check1"><span>Online</span></label>
+
+							<input class="customCheckbox" type="radio" name="check" value="1" checked="checked" id="check2">
+							<label class="customCheckbox" for="check2"><span>Local</span></label>
 
 							<div class="--postActivity_location --clearfix">
 								<div class="--postActivity_location_block">
-									<input type="checkbox" name="">
-									<label for=""><span>Use your profile location for this activity</span></label>
+									<input class="customCheckbox" type="checkbox" id="check3">
+									<label class="customCheckbox" for="check3">Use your profile location</label>
 
 									<div class="postActivity_inputBlock">
 										<input type="text">
