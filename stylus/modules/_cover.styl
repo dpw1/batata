@@ -1,0 +1,167 @@
+.cover
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    background-color rgba(255,255,255,.6)
+    z-index 100
+    .cover_box
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%,-50%)
+        min-width 800px
+        min-height 400px
+        background-color rgba(0,0,0,.85)
+        text-align center
+        font-size 0
+        padding 30px
+        +max-width(850px)
+            max-width 400px
+            min-width initial
+        +max-width(420px)
+            width 100%
+            height 100%
+            min-height initial
+            max-width initial
+        .cover_box_left,
+        .cover_box_right
+            width 50%
+            font-size 1rem
+            display inline-block
+            vertical-align top
+        .cover_box_left
+            border-right 1px dashed $white
+            padding-right 40px
+            +max-width(850px)
+                display none
+            h1,
+            span
+                text-transform uppercase
+                color $white
+                font-size $font-size-md
+            h1
+                font-weight $font-normal
+                margin-bottom 40px
+                span
+                    font-weight $font-bold
+                img
+                    width 30px
+                    display inline-block
+                    vertical-align text-bottom
+            h2
+                text-transform uppercase
+                font-size $font-size-xs
+                color $text-color-dark-3
+            .cover_profiles
+                margin 40px 0
+                a
+                    margin 5px
+                    width 70px
+                    display inline-block
+                    img
+                        border-radius 50%
+                        border 2px solid $white
+                        width 100%
+            p
+                font-size $font-size-xs
+                line-height 15px
+                color $text-color-dark-3
+        .cover_box_right
+            padding-left 40px
+            +max-width(850px)
+                padding-left 0
+                width auto
+            p
+                font-size $font-size-xs
+                line-height 15px
+                padding-bottom 10px
+                color $text-color-dark-3
+                padding-left 30px
+                span
+                    font-weight $font-bold
+                    color $white
+                img
+                    position absolute
+                    left -5px
+            .cover_profile
+                margin 5px
+                width 70px
+                margin-top 20px
+                display inline-block
+                vertical-align text-top
+                .cover_profile_crown
+                    position absolute
+                    right 0
+                    top -13px
+                    z-index 1
+                    transform rotate(30deg)
+                    width 25px
+                .cover_profile_profile
+                    border-radius 50%
+                    border 2px solid $white
+                    width 100%
+                .cover_profile_followers
+                    background-color $red
+                    color $white
+                    display inline-block
+                    padding 7px 15px
+                    margin-top 10px
+                    &:before
+                        content ""
+                        background-color $red
+                        display block
+                        width 10px
+                        height 10px
+                        position absolute
+                        top -4px
+                        z-index -1
+                        left 50%
+                        transform translateX(-50%) rotate(45deg)
+            .cover_box_right_hire
+                display inline-block
+                vertical-align text-top
+                width 240px
+                margin-top 20px
+                padding-left 20px
+                text-align left
+                p
+                    margin-bottom 5px
+                    font-size $font-size-xxs
+            h2
+                color $orange
+                margin-top 20px
+                text-transform uppercase
+            button
+                custom_button(standard, sm)
+                display block
+                margin 20px auto
+                i
+                    font-size $font-size-md
+                    display inline-block
+                    vertical-align middle
+                    position relative
+                    top -1px
+                    margin-right 5px
+            a
+                display block
+                margin 10px auto
+                color $orange
+                font-size $font-size-xs
+            label
+                color $orange
+                font-size $font-size-xs
+        .cover_box_close
+            width 20px
+            border-radius 3px
+            background-color $white
+            display block
+            position absolute
+            top 10px
+            right 10px
+            cursor pointer
+            i
+                line-height 20px
+                font-size $font-size-sm
+                color $text-color-dark-2
