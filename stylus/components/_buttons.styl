@@ -26,6 +26,14 @@ custom_button(btn-type = standard, btn-size = md)
         color white
         backgroundHover($deny-background, 5%)
         box-shadow 0px 1px 2px darken($deny-background, 50%)
+    else if btn-type == blocked
+        $blocked-background = #ececec
+        color #cccccc
+        background $blocked-background
+        cursor default !important
+        box-shadow 0px 1px 2px darken($blocked-background, 50%)
+        > span
+           color #cccccc
     /* ==================== */
 
     if btn-size == sm
